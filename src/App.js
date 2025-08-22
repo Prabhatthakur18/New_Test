@@ -1961,7 +1961,7 @@ onClick={async () => {
        {showThanks && (
          <div className="popup-overlay">
            <div className="popup-box" style={{ background: '#fff', color: '#111', borderRadius: '10px', padding: '20px', boxShadow: '0 16px 40px rgba(0,0,0,0.2)' }}>
-             <p style={{ margin: 0 }}>Thank you for your Order Request.</p>
+             <p style={{ margin: 0 }}>Thank you for your Order.</p>
              <div style={{ marginTop: '14px', textAlign: 'right' }}>
                <button
                  onClick={() => window.location.assign('/')}
