@@ -867,16 +867,16 @@ if (!orderFormRef.current) return;
 const pageHeight = pdf.internal.pageSize.getHeight();
 
 // Margins
-const marginLeft = 0;
-const marginTop = 0;
+const marginLeft = 3.5;
+const marginTop =2.5;
 const marginRight = 10;
-const marginBottom = 20;
+const marginBottom = 0;
 
 // Available space inside margins
 const availableWidth = pageWidth - marginLeft - marginRight;
 const availableHeight = pageHeight - marginTop - marginBottom;
 
-const logoResponse = await fetch('/logo.png');
+const logoResponse = await fetch('/loogo.png');
 const logoBlob = await logoResponse.blob();
 const logoDataUrl = await new Promise(resolve => {
   const reader = new FileReader();
@@ -898,7 +898,7 @@ const aspectRatio = logoWidth / logoHeight;
 
 // Desired max logo size (mm)
 const maxWidth = 40;
-const maxHeight = 30;
+const maxHeight = 40;
 
 // Scale within max size
 if (logoWidth > maxWidth) {
