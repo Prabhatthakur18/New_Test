@@ -129,34 +129,6 @@
 }
 
 /* ========== Center Heading ========== */
-.center-heading {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  text-align: center;
-  padding: 0 10px;
-}
-
-.center-heading h1 {
-  font-size: clamp(1.6rem, 6vw, 4rem);
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  /* background:#8B4513; */
-  background: linear-gradient(135deg, #35271d, #A0522D, #D2691E);
-
-  z-index: 60;
-    /* background: linear-gradient(90deg, #000000, #ffffff); */
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: 1px;
-  margin: 0;
-  animation: fadeSlide 1s ease-in-out;
-  line-height: 1.2;
-  word-wrap: break-word;
-}
 
 /* ========== Keyframes ========== */
 @keyframes fadeSlide {
@@ -249,5 +221,66 @@
   .corner-heading h1 {
     font-size: 1rem;
     line-height: 1.2;
+  }
+}
+/* ========== Slide Topbar Flex Fix ========== */
+.slide-topbar {
+  display: flex;
+  align-items: center;       /* vertically center logo & heading */
+  justify-content: center;   /* center horizontally */
+  gap: 1rem;                 /* space between logo and heading */
+  flex-wrap: wrap;           /* stack on small screens */
+  padding: 20px 40px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+.center-heading {
+  position: relative;        /* relative instead of absolute */
+  /* text-align: center; */
+  color: wheat;
+  flex: 2;                   /* occupy remaining space */
+  min-width: 200px;          /* prevents shrinking too much */
+}
+
+.center-heading h1 {
+  font-size: clamp(1.6rem, 6vw, 4rem);
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  margin: 0;
+  animation: fadeSlide 1s ease-in-out;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .center-heading h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-topbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .center-heading h1 {
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .center-heading h1 {
+    font-size: 1.6rem;
   }
 }

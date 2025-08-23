@@ -1273,7 +1273,7 @@ currentY += 4;
          }}
        >
          <img
-           src="/logooo.png"
+           src="/logo-rec.png"
            alt="Mahindra Logo"
            style={{
              height: '30px',
@@ -2124,7 +2124,7 @@ const PreviewPage = ({ savedImages, onModify, onConfirm, onClose }) => {
           fontSize: '20px',
           cursor: 'pointer',
           color: '#fff',
-          backgroundColor: '#dd052b',
+          backgroundColor: '#986b1cff',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -2639,9 +2639,12 @@ const App = () => {
      
      <div className="left-panel">
        <h3 style={{ fontFamily: '"Exo 2", sans-serif' }}>PERSONALISED COMFORT KIT</h3>
-       <p style={{ fontFamily: '"Exo 2", sans-serif', marginTop: '-20px' }}>
+       {/* <p style={{ fontFamily: '"Exo 2", sans-serif', marginTop: '-20px' }}>
          Showcase your unique style by personalizing your accessory with elegantly embroidered lettering in your preferred font.
-       </p>
+       </p> */}
+        <p className="section-text">
+    Showcase your unique style by personalizing your accessory with elegantly embroidered lettering in your preferred font.
+  </p>
 
        {/* Vehicle Model */}
        <label style={{ fontFamily: '"Exo 2", sans-serif', color: Boolean(primarySeatView) ? '#888' : 'inherit' }}>Vehicle Model</label>
@@ -2878,7 +2881,9 @@ const App = () => {
              zIndex: 100
            }}>
              <img src="/spinning-dots.svg" alt="Loading..." style={{ width: 60, height: 60 }} />
-             <div style={{ marginTop: '16px', color: '#005d8f', fontWeight: 'bold', fontSize: '18px' }}>
+             {/* <div style={{ marginTop: '16px', color: '#005d8f', fontWeight: 'bold', fontSize: '18px' }}> */}
+             <div style={{  color: '#005d8f', fontWeight: 'bold', fontSize: '18px' }}>
+
                {loadingText}
              </div>
            </div>

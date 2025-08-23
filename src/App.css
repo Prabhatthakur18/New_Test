@@ -20,7 +20,7 @@
   background-size: 400% 400%;
   animation: gradientShift 12s ease infinite;
   color: #ffffff;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   transition: all 0.3s ease;
 }
 
@@ -28,6 +28,13 @@
   0% {background-position: 0% 50%;}
   50% {background-position: 100% 50%;}
   100% {background-position: 0% 50%;}
+}
+.section-text {
+  font-family: "Exo 2", sans-serif;
+  font-size: 16px;
+  margin: 0; /* reset */
+  line-height: 1.6; /* better readability */
+  color: #444; /* softer text color */
 }
 /* Left Panel Container */
 /* .left-panel {
@@ -150,12 +157,16 @@
   font-weight: bold;
   font-size: 1rem;
   color: #fff;
-  background: linear-gradient(135deg, #ec891f, #ffb347);
+  background: linear-gradient(135deg, #2a2828, #ffb347);
   border: none;
-  border-radius: 8px;
+  border-radius: 2px;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
 }
 
 .left-panel .custom-button:hover {
@@ -171,9 +182,10 @@
   /* background:#ffab1e; */
   backdrop-filter: blur(10px);
   border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.05);
+  /* box-shadow: 0px 4px 8px rgba(245, 239, 239, 0.05); */
+  box-shadow: 0px 4px 8px rgb(245 239 239);
   padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(196, 193, 193, 0.08);
 }
 
 .image-container {
@@ -183,6 +195,8 @@
   margin: 0 auto;
   border-radius: 10px;
   overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35); /* elegant shadow */
+
 }
 
 .headrest-image {
