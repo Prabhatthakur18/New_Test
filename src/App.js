@@ -2805,7 +2805,7 @@ const App = () => {
         style={{
           fontFamily: '"Exo 2", sans-serif',
           fontWeight: 'bold',
-          color: '#e60023', // red like Amazon
+          color: '#ec891f', // red like Amazon
         }}
       >
         MRP:
