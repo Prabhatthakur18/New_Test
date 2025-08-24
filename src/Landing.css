@@ -229,7 +229,9 @@
   align-items: center;       /* vertically center logo & heading */
   justify-content: center;   /* center horizontally */
   gap: 1rem;                 /* space between logo and heading */
-  flex-wrap: wrap;           /* stack on small screens */
+  /* flex-wrap: wrap;           stack on small screens */
+  flex-wrap: nowrap;        
+
   padding: 20px 40px;
   position: absolute;
   top: 0;
@@ -267,20 +269,32 @@
 }
 
 @media (max-width: 768px) {
-  .slide-topbar {
+  /* .slide-topbar {
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
+  } */
+
+  /* .center-heading h1 {
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+  } */
+     .slide-topbar {
+    flex-direction: row;     /* force row layout */
+    justify-content: center; /* keep centered */
+    gap: 0.5rem;             /* smaller gap for mobile */
   }
 
   .center-heading h1 {
-    font-size: 2rem;
-    letter-spacing: 0.5px;
+    font-size: clamp(1.6rem, 5vw, 2.5rem); /* scale text but keep position */
   }
 }
 
 @media (max-width: 480px) {
-  .center-heading h1 {
+  /* .center-heading h1 {
     font-size: 1.6rem;
+  } */
+    .center-heading h1 {
+    font-size: clamp(1.2rem, 4vw, 2rem);
   }
 }
