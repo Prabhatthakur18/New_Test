@@ -228,7 +228,7 @@
   display: flex;
   align-items: center;       /* vertically center logo & heading */
   justify-content: center;   /* center horizontally */
-  gap: 1rem;                 /* space between logo and heading */
+  gap: 6rem;                 /* space between logo and heading */
   /* flex-wrap: wrap;           stack on small screens */
   flex-wrap: nowrap;        
 
